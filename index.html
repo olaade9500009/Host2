@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Host - Cloud Platform</title>
+    <link rel="stylesheet" href="styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🌍</span>
+            <div>
+                <div class="logo-text">Global Host</div>
+                <div class="creator-name">Created by olawale abdul-ganiyu</div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#dashboard" onclick="showSection('dashboard')">Dashboard</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#monitoring" onclick="showSection('monitoring')">Monitoring</a></li>
+                <li><a href="#satellites" onclick="showSection('satellites')">Satellites</a></li>
+                <li><a href="#auth" onclick="showSection('auth')">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-item active" onclick="showSection('dashboard')">
+                <span class="sidebar-icon">📊</span>
+                <span>Dashboard</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('servers')">
+                <span class="sidebar-icon">🖥️</span>
+                <span>Servers</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('networking')">
+                <span class="sidebar-icon">🌐</span>
+                <span>Networking & DNS</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('storage')">
+                <span class="sidebar-icon">💾</span>
+                <span>Storage</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('deploy')">
+                <span class="sidebar-icon">🚀</span>
+                <span>Deployment</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('projects')">
+                <span class="sidebar-icon">📁</span>
+                <span>Projects</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('monitoring')">
+                <span class="sidebar-icon">📈</span>
+                <span>Monitoring</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('security')">
+                <span class="sidebar-icon">🔒</span>
+                <span>Security</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('satellites')">
+                <span class="sidebar-icon">🛰️</span>
+                <span>NASA Satellites</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('freeplan')">
+                <span class="sidebar-icon">🎁</span>
+                <span>Free Plan</span>
+            </div>
+            <div class="sidebar-item" onclick="showSection('auth')">
+                <span class="sidebar-icon">👤</span>
+                <span>Authentication</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="active">
+                <h1 class="section-title">🚀 Dashboard Overview</h1>
+                
+                <!-- Uploaded Projects Index -->
+                <div class="card" style="margin-bottom: 2rem; border: 2px solid var(--primary-color);">
+                    <div class="card-header">
+                        <span class="card-title">📁 Uploaded Projects Index</span>
+                        <span class="card-icon">🌐</span>
+                    </div>
+                    <div id="uploadedProjectsIndex">
+                        <div style="padding: 1.5rem; text-align: center; color: var(--text-secondary);">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">📤</div>
+                            <div>No projects uploaded yet</div>
+                            <div style="font-size: 0.9rem; margin-top: 0.5rem;">Upload folders or ZIP files to see them here</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Total Projects</span>
+                            <span class="card-icon">📁</span>
+                        </div>
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Active deployments</div>
+                        <div class="stat-change positive">↑ 12% this week</div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Active Servers</span>
+                            <span class="card-icon">🖥️</span>
+                        </div>
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Running instances</div>
+                        <div class="stat-change positive">↑ 3 new servers</div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Total Storage</span>
+                            <span class="card-icon">💾</span>
+                        </div>
+                        <div class="stat-value">2.4 TB</div>
+                        <div class="stat-label">Of 10 TB available</div>
+                        <div class="stat-change negative">↓ 8% capacity left</div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Bandwidth</span>
+                            <span class="card-icon">📊</span>
+                        </div>
+                        <div class="stat-value">847 GB</div>
+                        <div class="stat-label">This month usage</div>
+                        <div class="stat-change positive">↓ 15% optimization</div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Uptime</span>
+                            <span class="card-icon">⚡</span>
+                        </div>
+                        <div class="stat-value">99.9%</div>
+                        <div class="stat-label">Last 30 days</div>
+                        <div class="stat-change positive">↑ Industry leading</div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Active Users</span>
+                            <span class="card-icon">👥</span>
+                        </div>
+                        <div class="stat-value">1,247</div>
+                        <div class="stat-label">Registered developers</div>
+                        <div class="stat-change positive">↑ 23% growth</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">🛰️ NASA Satellite Network Status</span>
+                        <span class="card-icon">🌍</span>
+                    </div>
+                    <div class="satellite-network">
+                        <div class="satellite-header">
+                            <div>
+                                <h3>Global Satellite Connectivity</h3>
+                                <p style="color: var(--text-secondary); margin-top: 0.5rem;">
+                                    Leveraging NASA's advanced satellite network for worldwide edge deployment
+                                </p>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--success);">12 Active</div>
+                                <div style="color: var(--text-secondary);">Satellites</div>
+                            </div>
+                        </div>
+                        <div class="satellite-grid">
+                            <div class="satellite-card">
+                                <div class="satellite-icon">🛰️</div>
+                                <div class="satellite-name">TDRS-10</div>
+                                <div class="satellite-status">● Online</div>
+                            </div>
+                            <div class="satellite-card">
+                                <div class="satellite-icon">🛰️</div>
+                                <div class="satellite-name">TDRS-11</div>
+                                <div class="satellite-status">● Online</div>
+                            </div>
+                            <div class="satellite-card">
+                                <div class="satellite-icon">🛰️</div>
+                                <div class="satellite-name">GOES-16</div>
+                                <div class="satellite-status">● Online</div>
+                            </div>
+                            <div class="satellite-card">
+                                <div class="satellite-icon">🛰️</div>
+                                <div class="satellite-name">GOES-17</div>
+                                <div class="satellite-status">● Online</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Servers Section -->
+            <section id="servers">
+                <h1 class="section-title">🖥️ Server Infrastructure</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Server Fleet</span>
+                        <span class="card-icon">🌐</span>
+                    </div>
+                    <div class="server-grid">
+                        <div class="server-card">
+                            <div><span class="server-status online"></span><span class="server-name">AWS-US-East-1</span></div>
+                            <div class="server-details">Ubuntu 22.04 LTS • 8 vCPU • 32GB RAM</div>
+                            <div class="server-details">Load: 45% • Uptime: 45d 12h</div>
+                        </div>
+                        <div class="server-card">
+                            <div><span class="server-status online"></span><span class="server-name">GCP-US-West</span></div>
+                            <div class="server-details">Ubuntu 22.04 LTS • 16 vCPU • 64GB RAM</div>
+                            <div class="server-details">Load: 32% • Uptime: 30d 8h</div>
+                        </div>
+                        <div class="server-card">
+                            <div><span class="server-status online"></span><span class="server-name">Azure-Europe</span></div>
+                            <div class="server-details">Ubuntu 22.04 LTS • 4 vCPU • 16GB RAM</div>
+                            <div class="server-details">Load: 67% • Uptime: 60d 3h</div>
+                        </div>
+                        <div class="server-card">
+                            <div><span class="server-status online"></span><span class="server-name">DigitalOcean-NYC1</span></div>
+                            <div class="server-details">Ubuntu 22.04 LTS • 2 vCPU • 8GB RAM</div>
+                            <div class="server-details">Load: 78% • Uptime: 15d 6h</div>
+                        </div>
+                        <div class="server-card">
+                            <div><span class="server-status online"></span><span class="server-name">Hetzner-DE</span></div>
+                            <div class="server-details">Ubuntu 22.04 LTS • 12 vCPU • 48GB RAM</div>
+                            <div class="server-details">Load: 23% • Uptime: 90d 18h</div>
+                        </div>
+                        <div class="server-card">
+                            <div><span class="server-status offline"></span><span class="server-name">AWS-Asia-Pacific</span></div>
+                            <div class="server-details">Ubuntu 22.04 LTS • 8 vCPU • 32GB RAM</div>
+                            <div class="server-details">Status: Maintenance</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <span class="card-title">Load Balancer Configuration</span>
+                        <span class="card-icon">⚖️</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Type</div>
+                            <div style="font-weight: 600;">Nginx Reverse Proxy</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Algorithm</div>
+                            <div style="font-weight: 600;">Round Robin</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Health Checks</div>
+                            <div style="font-weight: 600;">Every 30s</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Auto-scaling</div>
+                            <div style="font-weight: 600; color: var(--success);">Enabled</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Networking & DNS Section -->
+            <section id="networking">
+                <h1 class="section-title">🌐 Networking & DNS Management</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Domain Configuration</span>
+                        <span class="card-icon">🔗</span>
+                    </div>
+                    <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+                        <div style="font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Root Domain</div>
+                        <div style="color: var(--primary-color); font-size: 1.5rem;">yourcloud.com</div>
+                        <div style="color: var(--text-secondary); margin-top: 0.5rem;">DNS Provider: Cloudflare</div>
+                    </div>
+                </div>
+
+                <div class="subdomain-generator">
+                    <h3 style="margin-bottom: 1.5rem;">🎯 Free Subdomain Generator</h3>
+                    <div class="form-group">
+                        <label class="form-label">Project Name</label>
+                        <input type="text" class="form-input" id="projectName" placeholder="Enter your project name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Generated Subdomain</label>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <input type="text" class="form-input" id="generatedSubdomain" readonly value="project-name.yourcloud.com">
+                            <button class="btn btn-primary" onclick="generateSubdomain()">Generate</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Wildcard DNS Record</label>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; font-family: monospace;">
+                            *.yourcloud.com → <span id="serverIP">192.168.1.100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">🔒 SSL / HTTPS Configuration</span>
+                        <span class="card-icon">🛡️</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">SSL Provider</div>
+                            <div style="font-weight: 600;">Let's Encrypt</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Auto-Issuance</div>
+                            <div style="font-weight: 600; color: var(--success);">Enabled</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Challenge Type</div>
+                            <div style="font-weight: 600;">ACME DNS</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Certificates</div>
+                            <div style="font-weight: 600;">24 Active</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Storage Section -->
+            <section id="storage">
+                <h1 class="section-title">💾 Storage System</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Object Storage</span>
+                        <span class="card-icon">🗄️</span>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Provider</div>
+                            <div style="font-weight: 600; font-size: 1.2rem;">AWS S3 + MinIO</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Total Storage</div>
+                            <div style="font-weight: 600; font-size: 1.2rem; color: var(--primary-color);">2.4 TB</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Files Stored</div>
+                            <div style="font-weight: 600; font-size: 1.2rem;">1,247,893</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Versioning</div>
+                            <div style="font-weight: 600; color: var(--success);">Enabled</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                    <div class="upload-icon">📤</div>
+                    <div class="upload-text">Drop your files & folders here</div>
+                    <div class="upload-subtext">or click to browse • Supports folders, ZIP extraction, direct upload</div>
+                    <input type="file" id="fileInput" multiple webkitdirectory style="display: none;" onchange="handleFileUpload(event)">
+                </div>
+                
+                <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                    <button class="btn btn-primary" onclick="document.getElementById('folderInput').click()">
+                        📁 Upload Folder
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('zipInput').click()">
+                        📦 Upload ZIP
+                    </button>
+                    <input type="file" id="folderInput" webkitdirectory multiple style="display: none;" onchange="handleFileUpload(event)">
+                    <input type="file" id="zipInput" accept=".zip,.rar,.7z,.tar,.gz" style="display: none;" onchange="handleZipUpload(event)">
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Storage Features</span>
+                        <span class="card-icon">✨</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--primary-color);">
+                            <div style="font-weight: 600; margin-bottom: 0.25rem;">📁 Folder Upload</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">Upload entire directory structures</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--success);">
+                            <div style="font-weight: 600; margin-bottom: 0.25rem;">📦 ZIP Support</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">Auto-extract compressed files</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--warning);">
+                            <div style="font-weight: 600; margin-bottom: 0.25rem;">⚡ Chunked Uploads</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">Handle large files efficiently</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; border-left: 3px solid var(--info);">
+                            <div style="font-weight: 600; margin-bottom: 0.25rem;">🔐 Access Control</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">Granular permission management</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deployment Section -->
+            <section id="deploy">
+                <h1 class="section-title">🚀 Deployment Engine</h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Supported Deployment Types</span>
+                        <span class="card-icon">🎯</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid var(--border-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📄</div>
+                            <div style="font-weight: 600;">Static Sites</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">HTML, CSS, JS</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid var(--border-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🟢</div>
+                            <div style="font-weight: 600;">Node.js</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Express, NestJS</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid var(--border-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐘</div>
+                            <div style="font-weight: 600;">PHP</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Laravel, Symfony</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid var(--border-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐍</div>
+                            <div style="font-weight: 600;">Python</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Django, FastAPI</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; text-align: center; border: 1px solid var(--border-color);">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐳</div>
+                            <div style="font-weight: 600;">Docker</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.25rem;">Containers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <span class="card-title">Build System</span>
+                        <span class="card-icon">⚙️</span>
+                    </div>
+                    <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px;">
+                        <h4 style="margin-bottom: 1rem;">Auto-Detection Rules:</h4>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(37, 99, 235, 0.1); border-radius: 8px;">
+                                <span style="font-size: 1.5rem;">📦</span>
+                                <div>
+                                    <div style="font-weight: 600;">package.json detected</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">→ Node.js Application (Build with npm/yarn)</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(34, 197, 94, 0.1); border-radius: 8px;">
+                                <span style="font-size: 1.5rem;">📄</span>
+                                <div>
+                                    <div style="font-weight: 600;">index.html detected</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">→ Static Site (No build needed)</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(245, 158, 11, 0.1); border-radius: 8px;">
+                                <span style="font-size: 1.5rem;">🐍</span>
+                                <div>
+                                    <div style="font-weight: 600;">requirements.txt detected</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">→ Python Application (Build with pip)</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.75rem; background: rgba(124, 58, 237, 0.1); border-radius: 8px;">
+                                <span style="font-size: 1.5rem;">🐳</span>
+                                <div>
+                                    <div style="font-weight: 600;">Dockerfile detected</div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">→ Container Application (Build with Docker)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <span class="card-title">Runtime Environment</span>
+                        <span class="card-icon">🏃</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Container Engine</div>
+                            <div style="font-weight: 600;">Docker + Kubernetes</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Node.js Manager</div>
+                            <div style="font-weight: 600;">PM2</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Python Manager</div>
+                            <div style="font-weight: 600;">Gunicorn</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">PHP Manager</div>
+                            <div style="font-weight: 600;">PHP-FPM</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects">
+                <h1 class="section-title">📁 My Projects</h1>
+                
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-name">🚀 My Awesome App</span>
+                            <span class="project-status running">● Running</span>
+                        </div>
+                        <div class="project-body">
+                            <a href="https://my-awesome-app.yourcloud.com" class="project-url">my-awesome-app.yourcloud.com</a>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-value">128</div>
+                                    <div class="project-stat-label">Visits</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">45 MB</div>
+                                    <div class="project-stat-label">Size</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">99.9%</div>
+                                    <div class="project-stat-label">Uptime</div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">📊 Logs</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🔄 Restart</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">⚙️ Settings</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-name">🌐 Portfolio Site</span>
+                            <span class="project-status running">● Running</span>
+                        </div>
+                        <div class="project-body">
+                            <a href="https://portfolio.yourcloud.com" class="project-url">portfolio.yourcloud.com</a>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-value">1,247</div>
+                                    <div class="project-stat-label">Visits</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">12 MB</div>
+                                    <div class="project-stat-label">Size</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">100%</div>
+                                    <div class="project-stat-label">Uptime</div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">📊 Logs</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🔄 Restart</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">⚙️ Settings</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-name">🔧 API Backend</span>
+                            <span class="project-status stopped">● Stopped</span>
+                        </div>
+                        <div class="project-body">
+                            <a href="https://api-backend.yourcloud.com" class="project-url">api-backend.yourcloud.com</a>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-value">0</div>
+                                    <div class="project-stat-label">Visits</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">256 MB</div>
+                                    <div class="project-stat-label">Size</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">-</div>
+                                    <div class="project-stat-label">Uptime</div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                                <button class="btn btn-success" style="padding: 0.5rem 1rem; font-size: 0.85rem;">▶️ Start</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">📊 Logs</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">⚙️ Settings</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-name">📱 Mobile App API</span>
+                            <span class="project-status running">● Running</span>
+                        </div>
+                        <div class="project-body">
+                            <a href="https://mobile-api.yourcloud.com" class="project-url">mobile-api.yourcloud.com</a>
+                            <div class="project-stats">
+                                <div class="project-stat">
+                                    <div class="project-stat-value">8,542</div>
+                                    <div class="project-stat-label">Requests</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">89 MB</div>
+                                    <div class="project-stat-label">Size</div>
+                                </div>
+                                <div class="project-stat">
+                                    <div class="project-stat-value">99.8%</div>
+                                    <div class="project-stat-label">Uptime</div>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">📊 Logs</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🔄 Restart</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">⚙️ Settings</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Monitoring Section -->
+            <section id="monitoring">
+                <h1 class="section-title">📈 Monitoring & Logging</h1>
+                
+                <div class="monitoring-grid">
+                    <div class="log-panel">
+                        <div class="card-header">
+                            <span class="card-title">Live Logs</span>
+                            <span class="card-icon">📋</span>
+                        </div>
+                        <div id="logContainer" style="max-height: 400px; overflow-y: auto;">
+                            <div class="log-entry info">
+                                [2024-01-15 14:32:15] INFO: Starting deployment for my-awesome-app
+                            </div>
+                            <div class="log-entry success">
+                                [2024-01-15 14:32:18] SUCCESS: Build completed successfully
+                            </div>
+                            <div class="log-entry info">
+                                [2024-01-15 14:32:20] INFO: Deploying container to production
+                            </div>
+                            <div class="log-entry success">
+                                [2024-01-15 14:32:25] SUCCESS: Application is now live at my-awesome-app.yourcloud.com
+                            </div>
+                            <div class="log-entry info">
+                                [2024-01-15 14:33:10] INFO: SSL certificate issued automatically
+                            </div>
+                            <div class="log-entry warning">
+                                [2024-01-15 14:35:42] WARNING: High memory usage detected (85%)
+                            </div>
+                            <div class="log-entry info">
+                                [2024-01-15 14:36:00] INFO: Auto-scaling triggered - adding new instance
+                            </div>
+                            <div class="log-entry success">
+                                [2024-01-15 14:36:30] SUCCESS: New instance scaled successfully
+                            </div>
+                            <div class="log-entry error">
+                                [2024-01-15 14:40:15] ERROR: Temporary connection timeout on api-backend
+                            </div>
+                            <div class="log-entry info">
+                                [2024-01-15 14:40:20] INFO: Automatic restart initiated
+                            </div>
+                            <div class="log-entry success">
+                                [2024-01-15 14:40:25] SUCCESS: Service recovered and running normally
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Health Metrics</span>
+                            <span class="card-icon">❤️</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: var(--text-secondary);">CPU Usage</span>
+                                    <span style="color: var(--primary-color);">67%</span>
+                                </div>
+                                <div style="background: var(--dark-bg); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 67%; height: 100%; background: var(--primary-color); border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: var(--text-secondary);">Memory Usage</span>
+                                    <span style="color: var(--warning);">85%</span>
+                                </div>
+                                <div style="background: var(--dark-bg); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 85%; height: 100%; background: var(--warning); border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: var(--text-secondary);">Disk Usage</span>
+                                    <span style="color: var(--success);">45%</span>
+                                </div>
+                                <div style="background: var(--dark-bg); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 45%; height: 100%; background: var(--success); border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                    <span style="color: var(--text-secondary);">Network I/O</span>
+                                    <span style="color: var(--info);">52%</span>
+                                </div>
+                                <div style="background: var(--dark-bg); height: 8px; border-radius: 4px; overflow: hidden;">
+                                    <div style="width: 52%; height: 100%; background: var(--info); border-radius: 4px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Uptime Checks</div>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <span style="background: var(--success); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">● 5 min</span>
+                                <span style="background: var(--success); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">● 15 min</span>
+                                <span style="background: var(--success); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">● 30 min</span>
+                                <span style="background: var(--error); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem;">● 1 hr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Section -->
+            <section id="security">
+                <h1 class="section-title">🔒 Security Components</h1>
+                
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Firewall</span>
+                            <span class="card-icon">🛡️</span>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-weight: 600; color: var(--success);">● Active (UFW)</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem;">Cloud Firewall enabled</div>
+                        </div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                            <div>• HTTP (80): ALLOW</div>
+                            <div>• HTTPS (443): ALLOW</div>
+                            <div>• SSH (22): RESTRICTED</div>
+                            <div>• Custom ports: BLOCKED</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Rate Limiting</span>
+                            <span class="card-icon">🚦</span>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-weight: 600; color: var(--success);">● Enabled</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem;">1000 req/min per IP</div>
+                        </div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                            <div>• API endpoints: Protected</div>
+                            <div>• Login attempts: Limited</div>
+                            <div>• Uploads: Throttled</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">DDoS Protection</span>
+                            <span class="card-icon">⚡</span>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-weight: 600; color: var(--success);">● Cloudflare</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem;">Enterprise grade</div>
+                        </div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                            <div>• Layer 3/4 protection</div>
+                            <div>• Layer 7 mitigation</div>
+                            <div>• Real-time monitoring</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">Container Isolation</span>
+                            <span class="card-icon">🐳</span>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-weight: 600; color: var(--success);">● Strict Mode</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem;">Docker namespaces</div>
+                        </div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">
+                            <div>• Resource limits enforced</div>
+                            <div>• Network isolation</div>
+                            <div>• Read-only filesystems</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">File Scanning</span>
+                        <span class="card-icon">🔍</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Status</div>
+                            <div style="font-weight: 600; color: var(--success);">● Active</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Engine</div>
+                            <div style="font-weight: 600;">ClamAV</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Scan Frequency</div>
+                            <div style="font-weight: 600;">Real-time</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px;">
+                            <div style="color: var(--text-secondary); margin-bottom: 0.5rem;">Threats Blocked</div>
+                            <div style="font-weight: 600; color: var(--success);">127</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NASA Satellites Section -->
+            <section id="satellites">
+                <h1 class="section-title">🛰️ NASA Satellite Network Integration</h1>
+                
+                <div class="satellite-network">
+                    <div class="satellite-header">
+                        <div>
+                            <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Global Edge Deployment</h2>
+                            <p style="color: var(--text-secondary);">
+                                Powered by NASA's Tracking and Data Relay Satellite System (TDRSS) and GOES network
+                            </p>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-size: 3rem; font-weight: 700; color: var(--success);">12</div>
+                            <div style="color: var(--text-secondary);">Active Satellites</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">TDRS-10</span>
+                            <span class="card-icon">🛰️</span>
+                        </div>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Status</span>
+                                <span style="color: var(--success); font-weight: 600;">● Online</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Orbit</span>
+                                <span style="font-weight: 600;">Geostationary</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Coverage</span>
+                                <span style="font-weight: 600;">Americas</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Latency</span>
+                                <span style="font-weight: 600;">~120ms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">TDRS-11</span>
+                            <span class="card-icon">🛰️</span>
+                        </div>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Status</span>
+                                <span style="color: var(--success); font-weight: 600;">● Online</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Orbit</span>
+                                <span style="font-weight: 600;">Geostationary</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Coverage</span>
+                                <span style="font-weight: 600;">Atlantic</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Latency</span>
+                                <span style="font-weight: 600;">~115ms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">GOES-16</span>
+                            <span class="card-icon">🛰️</span>
+                        </div>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Status</span>
+                                <span style="color: var(--success); font-weight: 600;">● Online</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Orbit</span>
+                                <span style="font-weight: 600;">Geostationary</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Coverage</span>
+                                <span style="font-weight: 600;">Americas</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Latency</span>
+                                <span style="font-weight: 600;">~130ms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-title">GOES-17</span>
+                            <span class="card-icon">🛰️</span>
+                        </div>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Status</span>
+                                <span style="color: var(--success); font-weight: 600;">● Online</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Orbit</span>
+                                <span style="font-weight: 600;">Geostationary</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Coverage</span>
+                                <span style="font-weight: 600;">Pacific</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="color: var(--text-secondary);">Latency</span>
+                                <span style="font-weight: 600;">~140ms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 1.5rem;">
+                    <div class="card-header">
+                        <span class="card-title">Satellite Network Benefits</span>
+                        <span class="card-icon">✨</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--primary-color);">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌍</div>
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Global Coverage</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Deploy applications to edge locations worldwide with automatic routing
+                            </div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--success);">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚡</div>
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Low Latency</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Sub-150ms response times across all major geographic regions
+                            </div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--warning);">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔄</div>
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Auto-Failover</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Automatic rerouting during satellite maintenance or outages
+                            </div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--info);">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔒</div>
+                            <div style="font-weight: 600; margin-bottom: 0.5rem;">Secure Links</div>
+                            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+                                Encrypted satellite communication with military-grade security
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Free Plan Section -->
+            <section id="freeplan">
+                <h1 class="section-title">🎁 Free Plan Control</h1>
+                
+                <div class="free-plan">
+                    <h3 style="margin-bottom: 1rem;">Safe Free Hosting Limits</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        To offer FREE hosting safely while maintaining platform stability
+                    </p>
+                    <div class="plan-features">
+                        <div class="plan-feature">
+                            <div class="plan-feature-icon">💾</div>
+                            <div class="plan-feature-text">Storage Limit: 100MB per project</div>
+                        </div>
+                        <div class="plan-feature">
+                            <div class="plan-feature-icon">📊</div>
+                            <div class="plan-feature-text">Bandwidth: 1GB per month</div>
+                        </div>
+                        <div class="plan-feature">
+                            <div class="plan-feature-icon">💤</div>
+                            <div class="plan-feature-text">Sleep apps when idle (30 min)</div>
+                        </div>
+                        <div class="plan-feature">
+                            <div class="plan-feature-icon">📁</div>
+                            <div class="plan-feature-text">One project per user</div>
+                        </div>
+                        <div class="plan-feature">
+                            <div class="plan-feature-icon">🖥️</div>
+                            <div class="plan-feature-text">Shared CPU/RAM resources</div>
+                        </div>
+                        <div class="plan-feature">
+                            <div class="plan-feature-icon">🚀</div>
+                            <div class="plan-feature-text">Community support only</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Upgrade to Pro</span>
+                        <span class="card-icon">⭐</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div style="border: 2px solid var(--primary-color); border-radius: 10px; padding: 1.5rem;">
+                            <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary-color);">Starter</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">$9<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/mo</span></div>
+                            <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                                <li style="margin-bottom: 0.5rem;">✓ 5 Projects</li>
+                                <li style="margin-bottom: 0.5rem;">✓ 10GB Storage</li>
+                                <li style="margin-bottom: 0.5rem;">✓ 100GB Bandwidth</li>
+                                <li style="margin-bottom: 0.5rem;">✓ No sleep mode</li>
+                                <li>✓ Email support</li>
+                            </ul>
+                            <button class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Get Started</button>
+                        </div>
+
+                        <div style="border: 2px solid var(--accent-color); border-radius: 10px; padding: 1.5rem; background: rgba(16, 185, 129, 0.05);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                                <h4 style="font-size: 1.3rem; color: var(--accent-color);">Professional</h4>
+                                <span style="background: var(--accent-color); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem;">POPULAR</span>
+                            </div>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">$29<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/mo</span></div>
+                            <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                                <li style="margin-bottom: 0.5rem;">✓ Unlimited Projects</li>
+                                <li style="margin-bottom: 0.5rem;">✓ 50GB Storage</li>
+                                <li style="margin-bottom: 0.5rem;">✓ 1TB Bandwidth</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Custom domains</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Priority support</li>
+                                <li>✓ Auto-scaling</li>
+                            </ul>
+                            <button class="btn btn-success" style="width: 100%; margin-top: 1.5rem;">Get Started</button>
+                        </div>
+
+                        <div style="border: 2px solid var(--secondary-color); border-radius: 10px; padding: 1.5rem;">
+                            <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--secondary-color);">Enterprise</h4>
+                            <div style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">$99<span style="font-size: 1rem; color: var(--text-secondary); font-weight: 400;">/mo</span></div>
+                            <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                                <li style="margin-bottom: 0.5rem;">✓ Everything in Pro</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Unlimited Storage</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Unlimited Bandwidth</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Dedicated support</li>
+                                <li style="margin-bottom: 0.5rem;">✓ SLA guarantee</li>
+                                <li>✓ Custom solutions</li>
+                            </ul>
+                            <button class="btn btn-secondary" style="width: 100%; margin-top: 1.5rem;">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Authentication Section -->
+            <section id="auth">
+                <h1 class="section-title">👤 User Authentication</h1>
+                
+                <div class="auth-container">
+                    <div class="auth-form">
+                        <h2 class="auth-title">Welcome Back</h2>
+                        
+                        <div class="auth-buttons">
+                            <button class="auth-btn">
+                                <span>🔵</span> Sign in with Google
+                            </button>
+                            <button class="auth-btn">
+                                <span>🐙</span> Sign in with GitHub
+                            </button>
+                        </div>
+
+                        <div style="text-align: center; color: var(--text-secondary); margin: 1.5rem 0;">or</div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-input" placeholder="you@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-input" placeholder="••••••••">
+                        </div>
+
+                        <button class="btn btn-primary" style="width: 100%;">Sign In</button>
+
+                        <div style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary);">
+                            <a href="#" style="color: var(--primary-color); text-decoration: none;">Forgot password?</a>
+                        </div>
+
+                        <div style="text-align: center; margin-top: 1rem; color: var(--text-secondary);">
+                            Don't have an account? <a href="#" style="color: var(--primary-color); text-decoration: none;">Sign up</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <div class="card-header">
+                        <span class="card-title">User Dashboard Features</span>
+                        <span class="card-icon">🎛️</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📤</div>
+                            <div style="font-weight: 600;">Upload Folder</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Drag & drop deployment</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🚀</div>
+                            <div style="font-weight: 600;">Deploy Project</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">One-click deployment</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📊</div>
+                            <div style="font-weight: 600;">View Logs</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Real-time monitoring</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔄</div>
+                            <div style="font-weight: 600;">Restart App</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Quick restart</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🌐</div>
+                            <div style="font-weight: 600;">Custom Domain</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Paid feature</div>
+                        </div>
+                        <div style="background: var(--dark-bg); padding: 1rem; border-radius: 8px; text-align: center;">
+                            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚙️</div>
+                            <div style="font-weight: 600;">Environment Vars</div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem;">Secure config</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
